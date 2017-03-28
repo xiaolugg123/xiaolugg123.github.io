@@ -5,7 +5,8 @@ header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: ""
 keyword: ""
-url: "http://huangxuan.me"              # your host, for absolute URL
+
+#url: "http://huangxuan.me"              # your host, for absolute URL
 baseurl: "/huxblog-boilerplate"         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -82,8 +83,8 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
+        title: "大神 Blog",
+        href: "http://lukeat.me"
     },{
         title: "Foo",
         href: "#"
