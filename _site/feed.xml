@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-03-31T16:11:26+08:00</updated><id>/</id><title>WORLD.LU</title><subtitle>生活.工作.开开心心.玩游戏.写代码</subtitle><entry><title>MACOS PRO 编译 android x84_64 内核</title><link href="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/" rel="alternate" type="text/html" title="MACOS PRO 编译 android x84_64 内核" /><published>2017-03-31T00:00:00+08:00</published><updated>2017-03-31T00:00:00+08:00</updated><id>/MACOS编译android内核</id><content type="html" xml:base="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/">&lt;h1 id=&quot;macos-pro--android-x8464-&quot;&gt;MACOS PRO 编译 android x84_64 内核&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-01T10:43:26+08:00</updated><id>/</id><title>WORLD.LU</title><subtitle>生活.工作.开开心心.玩游戏.写代码</subtitle><entry><title>树莓派3安装bluez5.37</title><link href="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/" rel="alternate" type="text/html" title="树莓派3安装bluez5.37" /><published>2017-04-01T00:00:00+08:00</published><updated>2017-04-01T00:00:00+08:00</updated><id>/Bluez5.37 树莓派安装</id><content type="html" xml:base="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/">&lt;h1 id=&quot;bluez-537&quot;&gt;树莓派3安装bluez 5.37&lt;/h1&gt;
+&lt;p&gt;最近需要使用Bluez和D-bus做一个项目，以前一直没有研究过bluez和d-bus，这次正好研究和记录下。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;环境搭建&lt;/h3&gt;
+&lt;p&gt;由于只是deom性质的开发，目前没有实际的硬件，先使用Raspberry pi3作为开发硬件。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;关于树莓派固件&lt;/h3&gt;
+
+&lt;p&gt;为了驱动最新的蓝牙芯片最好使用官方最新的固件&lt;br /&gt;
+官方固件下载地址:&lt;code class=&quot;highlighter-rouge&quot;&gt;http://downloads.raspberrypi.org/raspbian/images/&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bluez&quot;&gt;安装BlueZ蓝牙协议栈&lt;/h3&gt;
+
+&lt;p&gt;在默认的官方固件中是不包含蓝牙协议栈的，所以我们需要安装Linux官方提供的Bluetooth协议栈，但是在官方的ppa（依赖安装源）提供的版本比较老，所以若条件允许我们还是需要安装一个版本比较高的BlueZ。&lt;/p&gt;
+
+&lt;p&gt;首先更新系统，并安装必备的软件库&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+sudo apt-get update  
+sudo apt-get upgrade 
+sudo apt-get install libdbus-1-dev libdbus-glib-1-dev libglib2.0-dev libical-dev libreadline-dev libudev-dev libusb-dev make wget 
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后下载Bluez最新源码：&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+wget https://www.kernel.org/pub/linux/bluetooth/bluez-5.37.tar.xz
+tar xvf bluez-5.37.tar.xz
+cd bluez-5.37   
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后进行编译，编译比较耗费时间：  &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+./configure --disable-systemd
+make   
+&lt;/code&gt;
+编译完成后，进行安装，此时需要安装至系统目录下，所以需要sudo命令： &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo make install&lt;/code&gt; &lt;br /&gt;
+此时就完成了Bluez协议栈的安装。&lt;/p&gt;</content><category term="raspberry pi 环境搭建" /><category term="下载安装bluez" /><category term="测试bluez" /><category term="DBUS 监测" /><summary>Raspberry-pi  Buluez Bluetooth BLE D-bus</summary></entry><entry><title>MACOS PRO 编译 android x84_64 内核</title><link href="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/" rel="alternate" type="text/html" title="MACOS PRO 编译 android x84_64 内核" /><published>2017-03-31T00:00:00+08:00</published><updated>2017-03-31T00:00:00+08:00</updated><id>/MACOS编译android内核</id><content type="html" xml:base="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/">&lt;h1 id=&quot;macos-pro--android-x8464-&quot;&gt;MACOS PRO 编译 android x84_64 内核&lt;/h1&gt;
 &lt;p&gt;编译环境配置 文件替换&lt;/p&gt;
 
 &lt;h3 id=&quot;section&quot;&gt;编译环境&lt;/h3&gt;
