@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-03T21:25:20+08:00</updated><id>/</id><title>WORLD.LU</title><subtitle>生活.工作.开开心心.玩游戏.写代码</subtitle><entry><title>树莓派3安装bluez5.37</title><link href="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/" rel="alternate" type="text/html" title="树莓派3安装bluez5.37" /><published>2017-04-01T00:00:00+08:00</published><updated>2017-04-01T00:00:00+08:00</updated><id>/Bluez5.37 树莓派安装</id><content type="html" xml:base="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/">&lt;h1 id=&quot;bluez-537&quot;&gt;树莓派3安装bluez 5.37&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-03T22:22:14+08:00</updated><id>/</id><title>WORLD.LU</title><subtitle>生活.工作.开开心心.玩游戏.写代码</subtitle><entry><title>树莓派3安装bluez5.37</title><link href="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/" rel="alternate" type="text/html" title="树莓派3安装bluez5.37" /><published>2017-04-01T00:00:00+08:00</published><updated>2017-04-01T00:00:00+08:00</updated><id>/Bluez5.37 树莓派安装</id><content type="html" xml:base="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/">&lt;h1 id=&quot;bluez-537&quot;&gt;树莓派3安装bluez 5.37&lt;/h1&gt;
 &lt;p&gt;最近需要使用Bluez和D-bus做一个项目，以前一直没有研究过bluez和d-bus，这次正好研究和记录下。&lt;/p&gt;
 
 &lt;h3 id=&quot;section&quot;&gt;环境搭建&lt;/h3&gt;
@@ -11,7 +11,9 @@
 
 &lt;h3 id=&quot;bluez&quot;&gt;安装BlueZ蓝牙协议栈&lt;/h3&gt;
 
-&lt;p&gt;在默认的官方固件中是不包含蓝牙协议栈的，所以我们需要安装Linux官方提供的Bluetooth协议栈，但是在官方的ppa（依赖安装源）提供的版本比较老，所以若条件允许我们还是需要安装一个版本比较高的BlueZ。&lt;/p&gt;
+&lt;p&gt;查看bluez 版本  &lt;br /&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;dpkg -s bluez |grep ^Version&lt;/code&gt;&lt;br /&gt;
+在默认的官方固件中是不包含蓝牙协议栈的，所以我们需要安装Linux官方提供的Bluetooth协议栈，但是在官方的ppa（依赖安装源）提供的版本比较老，所以若条件允许我们还是需要安装一个版本比较高的BlueZ。&lt;/p&gt;
 
 &lt;p&gt;首先更新系统，并安装必备的软件库&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;
