@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-01T10:43:26+08:00</updated><id>/</id><title>WORLD.LU</title><subtitle>生活.工作.开开心心.玩游戏.写代码</subtitle><entry><title>树莓派3安装bluez5.37</title><link href="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/" rel="alternate" type="text/html" title="树莓派3安装bluez5.37" /><published>2017-04-01T00:00:00+08:00</published><updated>2017-04-01T00:00:00+08:00</updated><id>/Bluez5.37 树莓派安装</id><content type="html" xml:base="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/">&lt;h1 id=&quot;bluez-537&quot;&gt;树莓派3安装bluez 5.37&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-04-03T21:25:20+08:00</updated><id>/</id><title>WORLD.LU</title><subtitle>生活.工作.开开心心.玩游戏.写代码</subtitle><entry><title>树莓派3安装bluez5.37</title><link href="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/" rel="alternate" type="text/html" title="树莓派3安装bluez5.37" /><published>2017-04-01T00:00:00+08:00</published><updated>2017-04-01T00:00:00+08:00</updated><id>/Bluez5.37 树莓派安装</id><content type="html" xml:base="/Bluez5.37-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85/">&lt;h1 id=&quot;bluez-537&quot;&gt;树莓派3安装bluez 5.37&lt;/h1&gt;
 &lt;p&gt;最近需要使用Bluez和D-bus做一个项目，以前一直没有研究过bluez和d-bus，这次正好研究和记录下。&lt;/p&gt;
 
 &lt;h3 id=&quot;section&quot;&gt;环境搭建&lt;/h3&gt;
@@ -34,7 +34,23 @@ make
 &lt;/code&gt;
 编译完成后，进行安装，此时需要安装至系统目录下，所以需要sudo命令： &lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo make install&lt;/code&gt; &lt;br /&gt;
-此时就完成了Bluez协议栈的安装。&lt;/p&gt;</content><category term="raspberry pi 环境搭建" /><category term="下载安装bluez" /><category term="测试bluez" /><category term="DBUS 监测" /><summary>Raspberry-pi  Buluez Bluetooth BLE D-bus</summary></entry><entry><title>MACOS PRO 编译 android x84_64 内核</title><link href="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/" rel="alternate" type="text/html" title="MACOS PRO 编译 android x84_64 内核" /><published>2017-03-31T00:00:00+08:00</published><updated>2017-03-31T00:00:00+08:00</updated><id>/MACOS编译android内核</id><content type="html" xml:base="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/">&lt;h1 id=&quot;macos-pro--android-x8464-&quot;&gt;MACOS PRO 编译 android x84_64 内核&lt;/h1&gt;
+此时就完成了Bluez协议栈的安装。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;一些错误分析&lt;/h3&gt;
+&lt;p&gt;error :GLib&amp;gt;=2.28 is required: &lt;br /&gt;
+这个错误需要安装如下依赖： &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install glib2.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;error ：D-Bus &amp;gt;= 1.6 is required的错误，这时我们需要更新D-Bus的版本： &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+wget http://dbus.freedesktop.org/releases/dbus/dbus-1.10.6.tar.gz   
+tar zxvf dbus-1.10.6.tar.gz    
+cd dbus-1.10.6    
+#安装到默认目录下   
+./configure    
+make    
+sudo make install    
+&lt;/code&gt;&lt;/p&gt;</content><category term="raspberry pi 环境搭建" /><category term="下载安装bluez" /><category term="测试bluez" /><category term="DBUS 监测" /><summary>Raspberry-pi  Buluez Bluetooth BLE D-bus</summary></entry><entry><title>MACOS PRO 编译 android x84_64 内核</title><link href="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/" rel="alternate" type="text/html" title="MACOS PRO 编译 android x84_64 内核" /><published>2017-03-31T00:00:00+08:00</published><updated>2017-03-31T00:00:00+08:00</updated><id>/MACOS编译android内核</id><content type="html" xml:base="/MACOS%E7%BC%96%E8%AF%91android%E5%86%85%E6%A0%B8/">&lt;h1 id=&quot;macos-pro--android-x8464-&quot;&gt;MACOS PRO 编译 android x84_64 内核&lt;/h1&gt;
 &lt;p&gt;编译环境配置 文件替换&lt;/p&gt;
 
 &lt;h3 id=&quot;section&quot;&gt;编译环境&lt;/h3&gt;
