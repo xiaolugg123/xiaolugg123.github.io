@@ -55,3 +55,37 @@ struct audio_module HAL_MODULE_INFO_SYM = {
     },
 };
 ```
+# 创建文件
+在`/device/<compary>/<device_name>/audio`目录  
+目录下包含**audio_hw.c Android.mk**  
+目前包含这两个，后续androids_procy.c 是否需要，目前没有研究清楚。
+使用mm  编译，编译后在 `out/target/product/flounder/obj_arm/lib`
+下会有.so生成
+#audio_hw.c 分析
+```c
+struct stub_audio_device {
+    struct audio_hw_device device;
+};
+
+struct stub_stream_out {
+    struct audio_stream_out stream;
+    int64_t last_write_time_us;
+};
+
+struct stub_stream_in {
+    struct audio_stream_in stream;
+    int64_t last_read_time_us;
+};
+```
+*** 分析***
+
+```c
+static uint32_t out_get_sample_rate(const struct audio_stream *stream)
+{
+    return 16000;
+}
+```
+__分析__
+## rate 设置为16000
+使用 16×16000 输入
+#权限 打开/dev/hidraw0
